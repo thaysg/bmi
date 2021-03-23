@@ -50,7 +50,14 @@ class ResultsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image(image: picture),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image(
+                          image: picture,
+                        ),
+                      ),
+                    ),
                     Text(
                       resultText.toUpperCase(),
                       style: resultTextStyle,
