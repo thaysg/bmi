@@ -234,6 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   MaterialPageRoute(
                     builder: (context) => ResultsPage(
                       bmiResult: calc.calculateBMI(),
+                      picture: calc.getImage(),
                       resultText: calc.getResult(),
                       interpretarion: calc.getInterpretation(),
                     ),

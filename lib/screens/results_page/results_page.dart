@@ -8,10 +8,15 @@ class ResultsPage extends StatelessWidget {
   final String resultText;
   final String interpretarion;
 
-  const ResultsPage(
-      {@required this.bmiResult,
-      @required this.resultText,
-      @required this.interpretarion});
+  //teste
+  final AssetImage picture;
+
+  const ResultsPage({
+    @required this.bmiResult,
+    @required this.resultText,
+    @required this.interpretarion,
+    this.picture,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +50,7 @@ class ResultsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Image(image: picture),
                     Text(
                       resultText.toUpperCase(),
                       style: resultTextStyle,
